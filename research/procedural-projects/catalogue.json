@@ -1,0 +1,265 @@
+{
+  "version": 1,
+  "title": "Procedural projects: from Townscaper to living worlds",
+  "reviewed_at": "2026-10-14",
+  "evidence": "documentation-reviewed",
+  "benchmark_status": "not-run",
+  "scope": "A discovery collection, not new canonical component manifests. Existing components are referenced by ID. Candidate projects are not yet integrated into the main explorer, package or MCP.",
+  "groups": {
+    "city-builders": "City builders and creative toys",
+    "grids": "Townscaper-style grids and experiments",
+    "constraints": "Constraint solvers and pattern systems",
+    "worlds": "Maps, terrain and environments",
+    "vegetation": "Trees and branching structures",
+    "art-materials": "Procedural art and materials",
+    "artificial-life": "Artificial life and evolving behaviour"
+  },
+  "projects": [
+    {
+      "id": "townscaper", "name": "Townscaper", "group": "city-builders", "role": "product-reference",
+      "summary": "Interactive town-building toy: coloured blocks on an irregular grid become houses, arches, stairs and bridges.",
+      "study": "Minimal input, automatic architectural detail and immediate feedback.",
+      "boundary": "Product inspiration, not a reusable engine or a grant to copy code or assets. Exact internal implementation is not inferred from appearance.",
+      "links": {"source": "https://store.steampowered.com/app/1291340/Townscaper/", "demo": "https://oskarstalberg.com/Townscaper/"}
+    },
+    {
+      "id": "tiny-glade", "name": "Tiny Glade", "group": "city-builders", "role": "product-reference",
+      "summary": "Gridless building toy in which walls, paths and raised structures receive context-sensitive architectural detail.",
+      "study": "Continuous editing, geometry adaptation and coherent small-scale scenes.",
+      "boundary": "A product reference; no embeddable library or source licence established by this review.",
+      "links": {"source": "https://store.steampowered.com/app/2198150/Tiny_Glade/"}
+    },
+    {
+      "id": "dystopika", "name": "Dystopika", "group": "city-builders", "role": "product-reference",
+      "summary": "A cyberpunk city-building sandbox focused on arranging a skyline and atmosphere.",
+      "study": "Large-scale silhouettes, night lighting and a low-friction creative interface.",
+      "boundary": "Visual and interaction inspiration, not a documented reusable city-generation API.",
+      "links": {"source": "https://store.steampowered.com/app/2379910/"}
+    },
+    {
+      "id": "bulwark-falconeer", "name": "Bulwark: Falconeer Chronicles", "group": "city-builders", "role": "product-reference",
+      "summary": "A building-focused game combining settlements with exploration and strategic interaction.",
+      "study": "Connected structures, vertical settlements and building across difficult terrain.",
+      "boundary": "Broader gameplay than a no-goal building toy. Included as product inspiration, not reusable source.",
+      "links": {"source": "https://store.steampowered.com/app/290100/Bulwark__Falconeer_Chronicles/"}
+    },
+    {
+      "id": "cloud-gardens", "name": "Cloud Gardens", "group": "city-builders", "role": "product-reference",
+      "summary": "Small scenes of urban decay are transformed by growing vegetation and placing objects.",
+      "study": "Plant-filled dioramas, composition and environmental storytelling.",
+      "boundary": "Game behaviour does not establish a reusable botany model or biological realism.",
+      "links": {"source": "https://www.noio.nl/cloud-gardens-presskit/"}
+    },
+    {
+      "id": "summerhouse", "name": "SUMMERHOUSE", "group": "city-builders", "role": "product-reference",
+      "summary": "A small creative building game for composing inhabited-looking places.",
+      "study": "Restrained interface, authored details and small scene composition.",
+      "boundary": "Adjacent creative-editor inspiration. A procedural implementation is NOT established merely because the game resembles other building toys.",
+      "links": {"source": "https://store.steampowered.com/app/2533960/SUMMERHOUSE/"}
+    },
+    {
+      "id": "bad-north", "name": "Bad North", "group": "city-builders", "role": "product-reference",
+      "summary": "A tactical game featuring procedurally generated islands.",
+      "study": "Readable small islands and terrain that supports gameplay constraints.",
+      "boundary": "A combat game, not a city editor; no reusable generation library established here.",
+      "links": {"source": "https://store.steampowered.com/app/688420/Bad_North_Jotunn_Edition/"}
+    },
+    {
+      "id": "irregular-grid", "name": "Irregular Grid", "group": "grids", "role": "candidate",
+      "summary": "Browser experiments exploring irregular grids, mesh structure and Townscaper-like construction techniques.",
+      "study": "The closest practical starting point in this collection for studying organic grids and mesh generation.",
+      "boundary": "Educational experiments, not a production town-building engine. Integration and output quality need testing.",
+      "stack": ["JavaScript", "Three.js"],
+      "license": {"code": "MIT", "assets": "unknown", "note": "Review bundled examples and dependencies independently."},
+      "links": {"source": "https://github.com/sketchpunklabs/irregular_grid", "demo": "https://sketchpunklabs.github.io/irregular_grid/"}
+    },
+    {
+      "id": "hexagrid-relaxing", "name": "HexagridRelaxing", "group": "grids", "role": "candidate",
+      "summary": "A C++ grid-generation and relaxation experiment inspired by Oskar Stalberg's work.",
+      "study": "Native grid relaxation and irregular topology.",
+      "boundary": "A prototype, not a town generator. No clear source licence was established; do not assume reuse permission.",
+      "stack": ["C++", "Dear ImGui"],
+      "license": {"code": "unknown", "assets": "unknown", "note": "Source visibility alone is not an open-source licence."},
+      "links": {"source": "https://github.com/CedricGuillemet/HexagridRelaxing"}
+    },
+    {
+      "id": "townbuilder", "name": "TownBuilder", "group": "grids", "role": "candidate",
+      "summary": "An educational attempt to recreate aspects of Townscaper's procedural construction.",
+      "study": "Decomposing the building toy into implementable experiments.",
+      "boundary": "Unofficial educational reproduction. A reusable engine and clear source licence were not established.",
+      "stack": [],
+      "license": {"code": "unknown", "assets": "unknown", "note": "Resolve licensing before copying implementation or assets."},
+      "links": {"source": "https://github.com/eliemichel/TownBuilder"}
+    },
+    {
+      "id": "organic-grid-townscaper", "name": "Organic Grid Townscaper", "group": "grids", "role": "candidate",
+      "summary": "Python code that generates organic irregular grids inspired by Townscaper.",
+      "study": "A small topology prototype before integrating geometry into a renderer.",
+      "boundary": "Generates grids, not finished architecture or a whole game.",
+      "stack": ["Python"],
+      "license": {"code": "MIT", "assets": "unknown", "note": "Code licence does not automatically cover all dependencies or third-party assets."},
+      "links": {"source": "https://github.com/LouisAndreN/organic-grid-townscaper"}
+    },
+    {
+      "id": "wavefunctioncollapse", "name": "WaveFunctionCollapse", "group": "constraints", "role": "component-reference",
+      "summary": "Pattern and tile synthesis using local compatibility constraints.",
+      "study": "How examples and adjacency rules can drive coherent procedural outputs.",
+      "boundary": "A solver is not a complete city renderer. Contradictions and authored tile rules still need handling.",
+      "canonical": {"id": "wavefunctioncollapse", "path": "primitives/procedural/wavefunctioncollapse.yaml"},
+      "links": {"source": "https://github.com/mxgmn/WaveFunctionCollapse"}
+    },
+    {
+      "id": "wavefunctioncollapse-js", "name": "WaveFunctionCollapse JavaScript", "group": "constraints", "role": "component-reference",
+      "summary": "A JavaScript implementation exposing overlapping and tiled generation models.",
+      "study": "Browser integration, injectable randomness and bounded generation steps.",
+      "boundary": "Produces pattern/image results; 3D meshes, gameplay rules and user editing require host code.",
+      "canonical": {"id": "wavefunctioncollapse-js", "path": "primitives/procedural/wavefunctioncollapse-js.yaml"},
+      "links": {"source": "https://github.com/kchapelier/wavefunctioncollapse"}
+    },
+    {
+      "id": "markovjunior", "name": "MarkovJunior", "group": "constraints", "role": "component-reference",
+      "summary": "A probabilistic pattern-rewriting language with bitmap and voxel generation examples.",
+      "study": "Grammar-like rewriting for architecture, patterns and staged generation.",
+      "boundary": "A reference language and examples, not an automatically embeddable browser engine.",
+      "canonical": {"id": "markovjunior", "path": "primitives/procedural/markovjunior.yaml"},
+      "links": {"source": "https://github.com/mxgmn/MarkovJunior"}
+    },
+    {
+      "id": "debroglie", "name": "DeBroglie", "group": "constraints", "role": "candidate",
+      "summary": "A C# constraint-based generation library supporting backtracking and additional non-local constraints.",
+      "study": "Generation with stronger structural requirements than simple local adjacency.",
+      "boundary": "Custom tile sets, constraints and rendering are still application work.",
+      "stack": ["C#", ".NET"],
+      "license": {"code": "MIT", "assets": "unknown", "note": "Review sample tile-set rights separately."},
+      "links": {"source": "https://github.com/BorisTheBrave/DeBroglie", "documentation": "https://boristhebrave.github.io/DeBroglie/"}
+    },
+    {
+      "id": "ghx-proc-gen", "name": "ghx_proc_gen", "group": "constraints", "role": "candidate",
+      "summary": "Rust procedural generation using constraint solving, with Bevy integration examples.",
+      "study": "A promising Rust route for model selection, socket compatibility and generated layouts.",
+      "boundary": "Core code and example assets have different licences. Rust availability does not establish Swift, WASM or Apple Silicon compatibility.",
+      "stack": ["Rust", "Bevy"],
+      "license": {"code": "MIT OR Apache-2.0", "assets": "mixed", "note": "README identifies CC-BY-SA-4.0 pillar/canyon assets and CC-BY-4.0 tile-layer assets."},
+      "links": {"source": "https://github.com/Henauxg/ghx_proc_gen"}
+    },
+    {
+      "id": "watabou-city-generator", "name": "Watabou Medieval Fantasy City Generator", "group": "worlds", "role": "candidate",
+      "summary": "Stylized medieval city-map generation, with an older public source implementation in TownGeneratorOS.",
+      "study": "Districts, streets and city silhouettes; links from map generation to scene building.",
+      "boundary": "The public source is older than the live tool. Permission to use generated maps does not establish permission to reuse source code.",
+      "stack": ["Haxe", "OpenFL"],
+      "license": {"code": "unknown", "assets": "unknown", "note": "The live tool's author permits commercial use of generated maps; source licensing remains unresolved in this review."},
+      "links": {"source": "https://github.com/watabou/TownGeneratorOS", "demo": "https://watabou.itch.io/medieval-fantasy-city-generator"}
+    },
+    {
+      "id": "azgaar-fantasy-map-generator", "name": "Azgaar Fantasy Map Generator", "group": "worlds", "role": "candidate",
+      "summary": "A browser-based generator and editor for richly structured fantasy world maps.",
+      "study": "Combining geography with settlements and world-building layers in an editable product.",
+      "boundary": "A full application rather than a minimal drop-in library; adapt selected subsystems deliberately.",
+      "stack": ["JavaScript", "TypeScript", "Browser"],
+      "license": {"code": "MIT", "assets": "unknown", "note": "The upstream licence also explicitly addresses derivative maps and other outputs; consult the complete text."},
+      "links": {"source": "https://github.com/Azgaar/Fantasy-Map-Generator", "demo": "https://azgaar.github.io/Fantasy-Map-Generator/", "license": "https://github.com/Azgaar/Fantasy-Map-Generator/blob/master/LICENSE"}
+    },
+    {
+      "id": "mapgen4", "name": "Red Blob Games Mapgen4", "group": "worlds", "role": "candidate",
+      "summary": "An interactive map-generation experiment combining painted input with procedural terrain and rivers.",
+      "study": "Human-guided generation instead of repeatedly rolling a random seed.",
+      "boundary": "Stylized map generation is not a validated geophysical model. Main code and dependencies have separate terms.",
+      "stack": ["JavaScript", "TypeScript", "Browser"],
+      "license": {"code": "Apache-2.0", "assets": "unknown", "note": "The README identifies the main code licence and separately licensed dependencies."},
+      "links": {"source": "https://github.com/redblobgames/mapgen4", "demo": "https://www.redblobgames.com/maps/mapgen4/"}
+    },
+    {
+      "id": "infinigen", "name": "Infinigen", "group": "worlds", "role": "component-reference",
+      "summary": "Procedural scene generation for detailed environments and synthetic visual data.",
+      "study": "Offline asset generation and the composition of many scene generators.",
+      "boundary": "A heavier authoring/research pipeline, not a small real-time browser world engine.",
+      "canonical": {"id": "infinigen", "path": "primitives/procedural/infinigen.yaml"},
+      "links": {"source": "https://github.com/princeton-vl/infinigen"}
+    },
+    {
+      "id": "three-terrain", "name": "THREE.Terrain", "group": "worlds", "role": "component-reference",
+      "summary": "Procedural terrain generation and height-data handling for Three.js.",
+      "study": "A browser terrain layer that can be combined with vegetation and settlement generators.",
+      "boundary": "Terrain generation alone does not supply city logic, navigation or ecosystem simulation.",
+      "canonical": {"id": "three-terrain", "path": "primitives/procedural/three-terrain.yaml"},
+      "links": {"source": "https://github.com/IceCreamYou/THREE.Terrain", "demo": "https://icecreamyou.github.io/THREE.Terrain/"}
+    },
+    {
+      "id": "ez-tree", "name": "EZ-Tree", "group": "vegetation", "role": "component-reference",
+      "summary": "Procedural tree-geometry generation for Three.js.",
+      "study": "Parameter-driven tree variation for small towns and dioramas.",
+      "boundary": "Tree meshes do not imply growth simulation, species ecology or resource conservation.",
+      "canonical": {"id": "ez-tree", "path": "primitives/procedural/ez-tree.yaml"},
+      "links": {"source": "https://github.com/dgreenheck/ez-tree"}
+    },
+    {
+      "id": "proctree-js", "name": "proctree.js", "group": "vegetation", "role": "candidate",
+      "summary": "A compact JavaScript procedural tree-mesh generator.",
+      "study": "Direct generation of branch and foliage geometry.",
+      "boundary": "Legacy implementation requiring compatibility review. A clear licence was not established from the reviewed material.",
+      "stack": ["JavaScript"],
+      "license": {"code": "unknown", "assets": "unknown", "note": "Unverified is not a claim that no licence exists; inspect source headers and obtain clarification before reuse."},
+      "links": {"source": "https://github.com/supereggbert/proctree.js"}
+    },
+    {
+      "id": "space-colonization-experiments", "name": "2D Space Colonization Experiments", "group": "vegetation", "role": "candidate",
+      "summary": "Interactive experiments generating branching structures through space colonization.",
+      "study": "Attractor-driven branching and incremental development of plant-like structures.",
+      "boundary": "A useful educational reference with a non-commercial restriction; not a permissively licensed commercial dependency.",
+      "stack": ["JavaScript", "Browser"],
+      "license": {"code": "CC-BY-NC-SA-4.0", "assets": "unknown", "note": "NonCommercial and ShareAlike conditions are explicit in the repository licence."},
+      "links": {"source": "https://github.com/jasonwebb/2d-space-colonization-experiments", "demo": "https://jasonwebb.github.io/2d-space-colonization-experiments/", "license": "https://github.com/jasonwebb/2d-space-colonization-experiments/blob/master/LICENSE"}
+    },
+    {
+      "id": "material-maker", "name": "Material Maker", "group": "art-materials", "role": "component-reference",
+      "summary": "A node-based procedural material and texture authoring application built with Godot.",
+      "study": "Authoring repeatable surface detail for buildings, terrain and props.",
+      "boundary": "Desktop authoring software, not automatically a browser shader library.",
+      "canonical": {"id": "material-maker", "path": "primitives/procedural/material-maker.yaml"},
+      "links": {"source": "https://github.com/RodZill4/material-maker"}
+    },
+    {
+      "id": "shan-shui-inf", "name": "Shan, Shui", "group": "art-materials", "role": "component-reference",
+      "summary": "Procedurally generated Chinese landscape artwork rendered as SVG.",
+      "study": "Strong art direction built from procedural strokes and compositional rules.",
+      "boundary": "A stylized artwork generator, not a terrain or physics simulation.",
+      "canonical": {"id": "shan-shui-inf", "path": "primitives/procedural/shan-shui-inf.yaml"},
+      "links": {"source": "https://github.com/LingDong-/shan-shui-inf"}
+    },
+    {
+      "id": "fishdraw", "name": "fishdraw", "group": "art-materials", "role": "component-reference",
+      "summary": "Procedural fish drawings with vector and structured drawing outputs.",
+      "study": "Anatomical variation and expressive line art without a learned image model.",
+      "boundary": "Generated appearance is not a swimming, behavioural or ecological simulation.",
+      "canonical": {"id": "fishdraw", "path": "primitives/procedural/fishdraw.yaml"},
+      "links": {"source": "https://github.com/LingDong-/fishdraw"}
+    },
+    {
+      "id": "lenia", "name": "Lenia", "group": "artificial-life", "role": "component-reference",
+      "summary": "Continuous cellular automata producing organism-like evolving patterns.",
+      "study": "Emergent form and behaviour from local update rules.",
+      "boundary": "An artificial-life reference, not a complete ecology or procedural town generator.",
+      "canonical": {"id": "lenia", "path": "primitives/artificial-life/lenia.yaml"},
+      "links": {"source": "https://github.com/Chakazul/Lenia"}
+    },
+    {
+      "id": "alien", "name": "ALIEN", "group": "artificial-life", "role": "candidate",
+      "summary": "A GPU artificial-life environment combining particle simulation, constructed organisms and agent controllers.",
+      "study": "Self-organization and the relationship between physical structure and behaviour.",
+      "boundary": "CUDA/OpenGL requirements are a major integration constraint; no M1 Max compatibility is asserted. Some agents use neural controllers.",
+      "stack": ["C++", "CUDA", "OpenGL"],
+      "license": {"code": "BSD-3-Clause", "assets": "unknown", "note": "Current upstream README identifies BSD-3-Clause; third-party dependencies still need review."},
+      "links": {"source": "https://github.com/chrxh/alien", "documentation": "https://alien-project.org"}
+    },
+    {
+      "id": "biosim4", "name": "biosim4", "group": "artificial-life", "role": "candidate",
+      "summary": "An evolution simulator whose agents use genetically encoded neural-network brains.",
+      "study": "Selection, mutations and emerging behaviour in a small simulated world.",
+      "boundary": "Upstream describes maintenance-only development. This is evolution plus neural control, not just procedural geometry.",
+      "stack": ["C++"],
+      "license": {"code": "MIT", "assets": "unknown", "note": "Licence reviewed separately from the README."},
+      "links": {"source": "https://github.com/davidrmiller/biosim4", "license": "https://github.com/davidrmiller/biosim4/blob/main/LICENSE"}
+    }
+  ]
+}
