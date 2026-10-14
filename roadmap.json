@@ -1,0 +1,337 @@
+{
+  "schemaVersion": 1,
+  "repository": "powerpuff-kitty/ai-catalogue",
+  "title": "AI Catalogue",
+  "updatedAt": "2026-10-14",
+  "planningIssue": "powerpuff-kitty/catalogue-engine#12",
+  "baselineRevision": "3f102760baa0cee533342fd9d1e8facdafe9534c",
+  "baseline": "The native catalogue and interfaces predate this split. Shared-preview PR #81 and curator-profile PR #83 remain open. Legacy issues #1-#14 have been reconciled to pinned source evidence and explicit remaining acceptance work below; none is closed by source inspection or this planning merge.",
+  "owns": [
+    "Canonical AI manifests, taxonomy, runtime/hardware policy, evidence and code/weights licensing.",
+    "AI-specific discovery, curator policy, promotion adapter and editorial content."
+  ],
+  "excludes": [
+    "Duplicated engine UI, generic scheduling/MCP/publishing infrastructure.",
+    "Breaking stable package/CLI/MCP identities or treating generic search as hardware proof."
+  ],
+  "phases": [
+    {
+      "id": "migration",
+      "title": "Non-breaking adoption and naming",
+      "exitCriteria": [
+        "#79 and child #84 preserve stable IDs/interfaces and correct active naming; retain the primary explorer until parity is verified."
+      ]
+    },
+    {
+      "id": "parity",
+      "title": "Complete dataset and interface parity",
+      "exitCriteria": [
+        "#85 runs the native and shared test matrix on the complete dataset; #80 closes only after distribution and rollback are verified."
+      ]
+    },
+    {
+      "id": "curation",
+      "title": "Review-only curation and approved promotion",
+      "exitCriteria": [
+        "#82 configuration is integrated; #86 validates approved native patches through the shared contract; live activation separately satisfies engine #7."
+      ]
+    },
+    {
+      "id": "editorial",
+      "title": "AI journal and release prerequisites",
+      "exitCriteria": [
+        "#87 proves draft exclusion and page/feed correspondence; approved content, URLs and rights are checked before any edition."
+      ]
+    },
+    {
+      "id": "native",
+      "title": "Audited native implementation and remaining work",
+      "exitCriteria": [
+        "Source-inspected residual scope is recorded for #1-#14. Close each implementation ticket only after its remaining checks or measured reports are attached; this planning pass does not execute models or certify devices."
+      ]
+    }
+  ],
+  "items": [
+    {
+      "issue": "powerpuff-kitty/ai-catalogue#79",
+      "title": "Non-breaking shared-engine adoption",
+      "phase": "migration",
+      "priority": "P0",
+      "status": "in-review",
+      "dependsOn": [
+        "powerpuff-kitty/catalogue-engine#1"
+      ],
+      "pullRequests": [
+        "https://github.com/powerpuff-kitty/ai-catalogue/pull/81"
+      ],
+      "notes": ""
+    },
+    {
+      "issue": "powerpuff-kitty/ai-catalogue#84",
+      "title": "Branding, repository/Pages URLs and compatibility aliases",
+      "phase": "migration",
+      "priority": "P0",
+      "status": "planned",
+      "dependsOn": [],
+      "pullRequests": [],
+      "notes": "",
+      "parent": "powerpuff-kitty/ai-catalogue#79"
+    },
+    {
+      "issue": "powerpuff-kitty/ai-catalogue#80",
+      "title": "Legacy interface retirement gate",
+      "phase": "parity",
+      "priority": "P1",
+      "status": "planned",
+      "dependsOn": [
+        "powerpuff-kitty/ai-catalogue#79",
+        "powerpuff-kitty/catalogue-engine#2"
+      ],
+      "pullRequests": [],
+      "notes": "Parent of #85; preserve translations, ranking, package and MCP contracts until acceptance."
+    },
+    {
+      "issue": "powerpuff-kitty/ai-catalogue#85",
+      "title": "Full-source search, export and served-interface parity",
+      "phase": "parity",
+      "priority": "P0",
+      "status": "planned",
+      "dependsOn": [
+        "powerpuff-kitty/ai-catalogue#79",
+        "powerpuff-kitty/catalogue-engine#2",
+        "powerpuff-kitty/catalogue-engine#13"
+      ],
+      "pullRequests": [],
+      "notes": "",
+      "parent": "powerpuff-kitty/ai-catalogue#80"
+    },
+    {
+      "issue": "powerpuff-kitty/ai-catalogue#82",
+      "title": "AI curator configuration",
+      "phase": "curation",
+      "priority": "P0",
+      "status": "in-review",
+      "dependsOn": [
+        "powerpuff-kitty/ai-catalogue#79",
+        "powerpuff-kitty/catalogue-engine#6"
+      ],
+      "pullRequests": [
+        "https://github.com/powerpuff-kitty/ai-catalogue/pull/83"
+      ],
+      "notes": ""
+    },
+    {
+      "issue": "powerpuff-kitty/ai-catalogue#86",
+      "title": "Approved AI proposals to canonical YAML",
+      "phase": "curation",
+      "priority": "P1",
+      "status": "planned",
+      "dependsOn": [
+        "powerpuff-kitty/ai-catalogue#82",
+        "powerpuff-kitty/catalogue-engine#16"
+      ],
+      "pullRequests": [],
+      "notes": "Shared coordination: engine #8. Never synthesize benchmark evidence or weights rights."
+    },
+    {
+      "issue": "powerpuff-kitty/ai-catalogue#87",
+      "title": "Revision-linked AI comparisons and shared journal",
+      "phase": "editorial",
+      "priority": "P1",
+      "status": "planned",
+      "dependsOn": [
+        "powerpuff-kitty/ai-catalogue#79",
+        "powerpuff-kitty/catalogue-engine#4"
+      ],
+      "pullRequests": [],
+      "notes": ""
+    },
+    {
+      "issue": "powerpuff-kitty/ai-catalogue#1",
+      "title": "Reproducible benchmark harness",
+      "phase": "native",
+      "priority": "P1",
+      "status": "partial",
+      "dependsOn": [],
+      "pullRequests": [],
+      "notes": "Reuse the isolated runner and three adapters. Remaining: verify every requested metric and null/unsupported state, attach real Apple Silicon/Raspberry Pi acceptance reports, and complete sustained RV1106 work in #2. Tooling and Linux smoke observations are not device acceptance.",
+      "sourceEvidence": [
+        "https://github.com/powerpuff-kitty/ai-catalogue/blob/3f102760baa0cee533342fd9d1e8facdafe9534c/benchmarks/README.md",
+        "https://github.com/powerpuff-kitty/ai-catalogue/blob/3f102760baa0cee533342fd9d1e8facdafe9534c/schema/benchmark.schema.json"
+      ]
+    },
+    {
+      "issue": "powerpuff-kitty/ai-catalogue#2",
+      "title": "RV1106 / SEEN-0 benchmark stack",
+      "phase": "native",
+      "priority": "P1",
+      "status": "planned",
+      "dependsOn": [],
+      "pullRequests": [],
+      "notes": "The coexistence monitor is not an RV1106 benchmark. Remaining: capture/encode, API, display and one supported RKNN detector on the actual 256 MB board; record drops, queue age, thermals and memory. Whistle/Needle stay unverified until demonstrated.",
+      "sourceEvidence": [
+        "https://github.com/powerpuff-kitty/ai-catalogue/blob/3f102760baa0cee533342fd9d1e8facdafe9534c/docs/RUNNABLE-V02.md",
+        "https://github.com/powerpuff-kitty/ai-catalogue/blob/3f102760baa0cee533342fd9d1e8facdafe9534c/benchmarks/README.md"
+      ]
+    },
+    {
+      "issue": "powerpuff-kitty/ai-catalogue#3",
+      "title": "Hardware compatibility matrix",
+      "phase": "native",
+      "priority": "P1",
+      "status": "partial",
+      "dependsOn": [],
+      "pullRequests": [],
+      "notes": "Exact-environment RAM filtering exists. Remaining: generate and test per-hardware runtime/format/accelerator indexes with explicit reported/reproduced/unknown states and negative-fit cases; do not infer hardware compatibility from a generic shared preview.",
+      "sourceEvidence": [
+        "https://github.com/powerpuff-kitty/ai-catalogue/blob/3f102760baa0cee533342fd9d1e8facdafe9534c/docs/RUNNABLE-V02.md",
+        "https://github.com/powerpuff-kitty/ai-catalogue/blob/3f102760baa0cee533342fd9d1e8facdafe9534c/benchmarks/README.md"
+      ]
+    },
+    {
+      "issue": "powerpuff-kitty/ai-catalogue#4",
+      "title": "Native searchable catalogue site",
+      "phase": "native",
+      "priority": "P1",
+      "status": "partial",
+      "dependsOn": [],
+      "pullRequests": [],
+      "notes": "The native static explorer, comparison and entry pages exist; do not rebuild them. Remaining: audit the original requested filter matrix and benchmark history against complete data, attach served-browser/accessibility evidence, and coordinate shared-interface cutover with #85.",
+      "sourceEvidence": [
+        "https://github.com/powerpuff-kitty/ai-catalogue/blob/3f102760baa0cee533342fd9d1e8facdafe9534c/docs/RUNNABLE-V02.md"
+      ]
+    },
+    {
+      "issue": "powerpuff-kitty/ai-catalogue#5",
+      "title": "Versioned machine-readable JSON indexes",
+      "phase": "native",
+      "priority": "P1",
+      "status": "partial",
+      "dependsOn": [],
+      "pullRequests": [],
+      "notes": "Canonical YAML already generates JSON exports and package/CLI/MCP surfaces. Remaining: document and test schema-version compatibility, all requested task/domain/hardware/runtime/compatibility indexes, stable IDs and actual static-host consumption. Shared export parity belongs to #85.",
+      "sourceEvidence": [
+        "https://github.com/powerpuff-kitty/ai-catalogue/blob/3f102760baa0cee533342fd9d1e8facdafe9534c/README.md"
+      ]
+    },
+    {
+      "issue": "powerpuff-kitty/ai-catalogue#6",
+      "title": "Benchmark evidence schema",
+      "phase": "native",
+      "priority": "P1",
+      "status": "partial",
+      "dependsOn": [],
+      "pullRequests": [],
+      "notes": "Benchmark schema v1 exists. Remaining: tighten nested validation and document firmware, conversion, throughput, utilization, power method and thermal fields with null/unsupported semantics, valid/invalid fixtures and backwards-compatible migration. Do not invent missing measurements.",
+      "sourceEvidence": [
+        "https://github.com/powerpuff-kitty/ai-catalogue/blob/3f102760baa0cee533342fd9d1e8facdafe9534c/schema/benchmark.schema.json",
+        "https://github.com/powerpuff-kitty/ai-catalogue/blob/3f102760baa0cee533342fd9d1e8facdafe9534c/benchmarks/README.md"
+      ]
+    },
+    {
+      "issue": "powerpuff-kitty/ai-catalogue#7",
+      "title": "Audio coverage",
+      "phase": "native",
+      "priority": "P1",
+      "status": "partial",
+      "dependsOn": [],
+      "pullRequests": [],
+      "notes": "Snapshot has 53 audio records, not 53 edge-tested models. Remaining: map the eight requested audio task families to model-level entries, audit primary sources/code and weights rights, identify gaps and process a bounded reviewed batch with unknown runtime/RAM fields preserved.",
+      "sourceEvidence": [
+        "https://github.com/powerpuff-kitty/ai-catalogue/blob/3f102760baa0cee533342fd9d1e8facdafe9534c/generated/coverage.json"
+      ]
+    },
+    {
+      "issue": "powerpuff-kitty/ai-catalogue#8",
+      "title": "Vision coverage",
+      "phase": "native",
+      "priority": "P1",
+      "status": "partial",
+      "dependsOn": [],
+      "pullRequests": [],
+      "notes": "Snapshot has 115 vision records, not verified coverage of every requested task. Remaining: map detection through low-light enhancement, audit model versus toolkit roles, retain conversion/NPU evidence separately and review a bounded gap-filling batch.",
+      "sourceEvidence": [
+        "https://github.com/powerpuff-kitty/ai-catalogue/blob/3f102760baa0cee533342fd9d1e8facdafe9534c/generated/coverage.json"
+      ]
+    },
+    {
+      "issue": "powerpuff-kitty/ai-catalogue#9",
+      "title": "Sensor and industrial coverage",
+      "phase": "native",
+      "priority": "P1",
+      "status": "partial",
+      "dependsOn": [],
+      "pullRequests": [],
+      "notes": "Snapshot has seven sensor and three manufacturing records. Remaining: audit vibration, IMU, radar, fall detection, maintenance, anomaly, environment and fusion coverage; distinguish vendor collections from individual usable models and retain explicit deployment unknowns.",
+      "sourceEvidence": [
+        "https://github.com/powerpuff-kitty/ai-catalogue/blob/3f102760baa0cee533342fd9d1e8facdafe9534c/generated/coverage.json"
+      ]
+    },
+    {
+      "issue": "powerpuff-kitty/ai-catalogue#10",
+      "title": "Geospatial and scientific coverage",
+      "phase": "native",
+      "priority": "P1",
+      "status": "partial",
+      "dependsOn": [],
+      "pullRequests": [],
+      "notes": "Snapshot has geospatial, science, time-series and weather entries. Remaining: build the requested task/source coverage matrix, record input-data/downstream-head requirements and audit local-inference evidence; metadata counts alone do not close this research workstream.",
+      "sourceEvidence": [
+        "https://github.com/powerpuff-kitty/ai-catalogue/blob/3f102760baa0cee533342fd9d1e8facdafe9534c/generated/coverage.json"
+      ]
+    },
+    {
+      "issue": "powerpuff-kitty/ai-catalogue#11",
+      "title": "Evidence/completeness scoring",
+      "phase": "native",
+      "priority": "P2",
+      "status": "planned",
+      "dependsOn": [],
+      "pullRequests": [],
+      "notes": "Coverage/unknown counters exist; they are not acceptance of the requested per-entry score. Remaining: define a transparent completeness rubric, expose missing fields and test edge cases across model/toolkit/primitive roles. Completeness must never be presented as model quality or measured performance.",
+      "sourceEvidence": [
+        "https://github.com/powerpuff-kitty/ai-catalogue/blob/3f102760baa0cee533342fd9d1e8facdafe9534c/generated/coverage.json"
+      ]
+    },
+    {
+      "issue": "powerpuff-kitty/ai-catalogue#12",
+      "title": "Link, manifest and generated-drift checks",
+      "phase": "native",
+      "priority": "P1",
+      "status": "partial",
+      "dependsOn": [],
+      "pullRequests": [],
+      "notes": "Schema/test/drift/audit workflows and a non-blocking weekly link audit exist. Remaining: verify each original vocabulary/duplicate/evidence requirement against full data, capture successful CI/link reports after runner recovery and coordinate rename/parity with #84/#85. Workflow presence is not a passing execution.",
+      "sourceEvidence": [
+        "https://github.com/powerpuff-kitty/ai-catalogue/blob/3f102760baa0cee533342fd9d1e8facdafe9534c/.github/workflows/catalog.yml",
+        "https://github.com/powerpuff-kitty/ai-catalogue/blob/3f102760baa0cee533342fd9d1e8facdafe9534c/docs/RUNNABLE-V02.md"
+      ]
+    },
+    {
+      "issue": "powerpuff-kitty/ai-catalogue#13",
+      "title": "Embodied AI and learned-control coverage",
+      "phase": "native",
+      "priority": "P1",
+      "status": "partial",
+      "dependsOn": [],
+      "pullRequests": [],
+      "notes": "Snapshot has 11 control and 14 robotics records. Remaining: map all requested embodied-control families and audit control rate, observations/actions, actuators, safety envelope and exact hardware evidence; retain absent values as unknown. Counts do not imply safe executable controllers.",
+      "sourceEvidence": [
+        "https://github.com/powerpuff-kitty/ai-catalogue/blob/3f102760baa0cee533342fd9d1e8facdafe9534c/generated/coverage.json"
+      ]
+    },
+    {
+      "issue": "powerpuff-kitty/ai-catalogue#14",
+      "title": "Bounded tiny-model training examples",
+      "phase": "native",
+      "priority": "P2",
+      "status": "planned",
+      "dependsOn": [],
+      "pullRequests": [],
+      "notes": "Training guidance and inference recipes do not establish the four requested end-to-end training pipelines. Remaining: bounded IMU, vibration, image and simulated-servo examples with declared budgets, non-ML baselines, dataset provenance, train/export steps and actual device or simulator reports.",
+      "sourceEvidence": [
+        "https://github.com/powerpuff-kitty/ai-catalogue/blob/3f102760baa0cee533342fd9d1e8facdafe9534c/docs/RUNNABLE-V02.md"
+      ]
+    }
+  ]
+}
