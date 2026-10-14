@@ -4,7 +4,7 @@
 
 **41 procedural components** and **3 hybrid recipes**. Category memberships overlap; entries are not duplicated.
 
-[Integration guide](PROCEDURAL-GUIDE.md) · [All components](CATALOGUE.md) · [Live procedural view](https://powerpuff-kitty.github.io/embedded-AI/?view=procedural) · [Hybrid recipes](https://powerpuff-kitty.github.io/embedded-AI/?view=hybrid)
+[Integration guide](PROCEDURAL-GUIDE.md) · [All components](CATALOGUE.md) · [Live procedural view](https://powerpuff-kitty.github.io/ai-catalogue/?view=procedural) · [Hybrid recipes](https://powerpuff-kitty.github.io/ai-catalogue/?view=hybrid)
 
 A browser library, standalone browser reference, native library, native authoring reference and shader library are different integration scopes. None implies measured device fit. **unknown** is not a negative result; **not-applicable** is not zero. A seed alone is not a cross-version replay guarantee.
 

@@ -8,7 +8,7 @@ export function renderProceduralPage(entries: Entry[]): string {
   const byId = new Map(entries.map(e => [e.id, e]));
   let out = '# Procedural generation & simulation\n\n> Generated from canonical YAML. Do not edit by hand; run `npm run index`.\n\n';
   out += `**${components.length} procedural components** and **${recipes.length} hybrid recipes**. Category memberships overlap; entries are not duplicated.\n\n`;
-  out += '[Integration guide](PROCEDURAL-GUIDE.md) · [All components](CATALOGUE.md) · [Live procedural view](https://powerpuff-kitty.github.io/embedded-AI/?view=procedural) · [Hybrid recipes](https://powerpuff-kitty.github.io/embedded-AI/?view=hybrid)\n\n';
+  out += '[Integration guide](PROCEDURAL-GUIDE.md) · [All components](CATALOGUE.md) · [Live procedural view](https://powerpuff-kitty.github.io/ai-catalogue/?view=procedural) · [Hybrid recipes](https://powerpuff-kitty.github.io/ai-catalogue/?view=hybrid)\n\n';
   out += 'A browser library, standalone browser reference, native library, native authoring reference and shader library are different integration scopes. None implies measured device fit. **unknown** is not a negative result; **not-applicable** is not zero. A seed alone is not a cross-version replay guarantee.\n\n';
   for (const category of PROCEDURAL_CATEGORIES) {
     const group = components.filter(e => e.procedural.categories.includes(category));

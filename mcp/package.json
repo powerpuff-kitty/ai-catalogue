@@ -4,10 +4,10 @@
   "description": "MCP server exposing the embedded-ai-catalog need matcher and metadata search to Claude, Cursor and other MCP clients.",
   "type": "module",
   "license": "MIT",
-  "homepage": "https://powerpuff-kitty.github.io/embedded-AI/",
+  "homepage": "https://powerpuff-kitty.github.io/ai-catalogue/",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/powerpuff-kitty/embedded-AI.git",
+    "url": "git+https://github.com/powerpuff-kitty/ai-catalogue.git",
     "directory": "mcp"
   },
   "keywords": [

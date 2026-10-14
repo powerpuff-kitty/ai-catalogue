@@ -6,7 +6,7 @@ const write = process.argv.includes('--write');
 const token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || (() => {
   try { return execFileSync('gh', ['auth', 'token'], { encoding: 'utf8' }).trim(); } catch { return ''; }
 })();
-const ghHeaders: Record<string, string> = { 'user-agent': 'embedded-ai-licence-audit' };
+const ghHeaders: Record<string, string> = { 'user-agent': 'ai-catalogue-licence-audit' };
 if (token) ghHeaders.authorization = `Bearer ${token}`;
 
 const NORMALISE: Record<string, string> = {

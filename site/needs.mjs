@@ -273,7 +273,7 @@ export function upstreamOf(entry) {
 
 /** Markdown shortlist for the current selection, suitable for a chat or issue. */
 export function shortlistMarkdown(entries) {
-  const lines = ['# embedded-AI shortlist', ''];
+  const lines = ['# ai-catalogue shortlist', ''];
   for (const entry of entries) {
     const upstream = upstreamOf(entry);
     lines.push(`- **${entry.name}** — ${entry.kind} / ${entry.usage?.mode ?? 'unknown'}`);

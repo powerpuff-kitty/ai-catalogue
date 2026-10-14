@@ -15,7 +15,7 @@ catalogue_batch: procedural-2026-10-07
 description: Design-only composition of learned decisions and procedural components. Integration adapters
   and an end-to-end benchmark are not yet implemented.
 links:
-  homepage: https://github.com/powerpuff-kitty/embedded-AI/blob/main/docs/PROCEDURAL-GUIDE.md
+  homepage: https://github.com/powerpuff-kitty/ai-catalogue/blob/main/docs/PROCEDURAL-GUIDE.md
 model:
   parameters: null
   file_size_mb: null

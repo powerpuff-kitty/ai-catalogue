@@ -1,22 +1,22 @@
-# embedded-AI
+# ai-catalogue
 
 > Embeddable intelligence and procedural computing — learned models, generators, simulations and hybrid recipes, with explicit runtime and evidence boundaries.
 
-[![Live explorer](https://img.shields.io/badge/live_explorer-open-2ea44f?logo=githubpages&logoColor=white)](https://powerpuff-kitty.github.io/embedded-AI/)
-[![pages](https://img.shields.io/github/actions/workflow/status/powerpuff-kitty/embedded-AI/pages.yml?label=pages)](https://github.com/powerpuff-kitty/embedded-AI/actions/workflows/pages.yml)
-[![catalog](https://img.shields.io/github/actions/workflow/status/powerpuff-kitty/embedded-AI/catalog.yml?label=validate)](https://github.com/powerpuff-kitty/embedded-AI/actions/workflows/catalog.yml)
-[![recipes](https://img.shields.io/github/actions/workflow/status/powerpuff-kitty/embedded-AI/recipes.yml?label=recipes)](https://github.com/powerpuff-kitty/embedded-AI/actions/workflows/recipes.yml)
-[![entries](https://img.shields.io/badge/dynamic/json?color=blue&label=entries&query=%24.total&url=https%3A%2F%2Fraw.githubusercontent.com%2Fpowerpuff-kitty%2Fembedded-AI%2Fmain%2Fgenerated%2Fcoverage.json)](generated/coverage.json)
+[![Live explorer](https://img.shields.io/badge/live_explorer-open-2ea44f?logo=githubpages&logoColor=white)](https://powerpuff-kitty.github.io/ai-catalogue/)
+[![pages](https://img.shields.io/github/actions/workflow/status/powerpuff-kitty/ai-catalogue/pages.yml?label=pages)](https://github.com/powerpuff-kitty/ai-catalogue/actions/workflows/pages.yml)
+[![catalog](https://img.shields.io/github/actions/workflow/status/powerpuff-kitty/ai-catalogue/catalog.yml?label=validate)](https://github.com/powerpuff-kitty/ai-catalogue/actions/workflows/catalog.yml)
+[![recipes](https://img.shields.io/github/actions/workflow/status/powerpuff-kitty/ai-catalogue/recipes.yml?label=recipes)](https://github.com/powerpuff-kitty/ai-catalogue/actions/workflows/recipes.yml)
+[![entries](https://img.shields.io/badge/dynamic/json?color=blue&label=entries&query=%24.total&url=https%3A%2F%2Fraw.githubusercontent.com%2Fpowerpuff-kitty%2Fai-catalogue%2Fmain%2Fgenerated%2Fcoverage.json)](generated/coverage.json)
 [![code license: MIT](https://img.shields.io/badge/code_license-MIT-blue.svg)](LICENSE)
 [![data license: CC BY 4.0](https://img.shields.io/badge/data_license-CC_BY_4.0-lightgrey.svg)](LICENSE-DATA)
 
-**Explore it live** — <a href="https://powerpuff-kitty.github.io/embedded-AI/" target="_blank" rel="noopener">powerpuff-kitty.github.io/embedded-AI</a> · no install, no account, no tracking.
+**Explore it live** — <a href="https://powerpuff-kitty.github.io/ai-catalogue/" target="_blank" rel="noopener">powerpuff-kitty.github.io/ai-catalogue</a> · no install, no account, no tracking.
 
 ---
 
 ## What is this?
 
-**embedded-AI is a machine-readable catalogue of embeddable AI** — models, toolkits and non-AI primitives for local and resource-constrained computing, from microcontrollers and phones to single-board computers and servers.
+**ai-catalogue is a machine-readable catalogue of embeddable AI** — models, toolkits and non-AI primitives for local and resource-constrained computing, from microcontrollers and phones to single-board computers and servers.
 
 Each entry is a small YAML file. The tables below, the JSON exports, the search and need-matching CLIs, and the web explorer are all generated from those files. Fields that are not known are left unknown rather than guessed.
 
@@ -31,20 +31,22 @@ Each entry is a small YAML file. The tables below, the JSON exports, the search 
 
 ## Procedural generation & simulation
 
-[Browse procedural components](https://powerpuff-kitty.github.io/embedded-AI/?view=procedural) · [Browse hybrid recipes](https://powerpuff-kitty.github.io/embedded-AI/?view=hybrid) · [AI view](https://powerpuff-kitty.github.io/embedded-AI/?view=ai)
+[Browse procedural components](https://powerpuff-kitty.github.io/ai-catalogue/?view=procedural) · [Browse hybrid recipes](https://powerpuff-kitty.github.io/ai-catalogue/?view=hybrid) · [AI view](https://powerpuff-kitty.github.io/ai-catalogue/?view=ai)
 
 [Full procedural table](docs/PROCEDURAL.md) · [Integration and metadata guide](docs/PROCEDURAL-GUIDE.md). New tools are documented, not benchmarked; the initial hybrid recipes are design-only. Browser/native/shader integration scope is explicit, and non-learned tools have no model weights.
 
 ## Quick start
 
+The repository and website are named `ai-catalogue`. The published npm packages retain their `embedded-ai-catalog` and `embedded-ai-catalog-mcp` names, and MCP resources retain their `embedded-ai://` addresses for compatibility.
+
 **Use the live explorer** — nothing to install:
-<a href="https://powerpuff-kitty.github.io/embedded-AI/" target="_blank" rel="noopener">https://powerpuff-kitty.github.io/embedded-AI/</a>
+<a href="https://powerpuff-kitty.github.io/ai-catalogue/" target="_blank" rel="noopener">https://powerpuff-kitty.github.io/ai-catalogue/</a>
 
 **Or work locally:**
 
 ```sh
-git clone https://github.com/powerpuff-kitty/embedded-AI.git
-cd embedded-AI
+git clone https://github.com/powerpuff-kitty/ai-catalogue.git
+cd ai-catalogue
 npm ci --ignore-scripts
 npm run search -- --domain finance --usage pretrained      # metadata search
 npm run need -- "detect people offline with a tiny model"  # plain-language matcher
@@ -75,7 +77,7 @@ The generated JSON also ships directly: `embedded-ai-catalog/catalog.json`, `emb
 The same catalogue and need matcher are available to MCP clients (Claude, Cursor) via [`mcp/`](mcp/README.md):
 
 ```json
-{ "mcpServers": { "embedded-ai": { "command": "npx", "args": ["-y", "embedded-ai-catalog-mcp"] } } }
+{ "mcpServers": { "ai-catalogue": { "command": "npx", "args": ["-y", "embedded-ai-catalog-mcp"] } } }
 ```
 
 Tools: `need`, `search`, `get_entry`, `list_domains`, `catalogue_stats`; plus `embedded-ai://catalog` and `embedded-ai://coverage` resources.

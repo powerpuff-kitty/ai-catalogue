@@ -130,7 +130,7 @@ export function renderCatalogueSummary(entries: Entry[]): string {
   return `**${entries.length} entries** across ${domains} domains — models, collections, pipelines, toolkits and non-AI primitives. Browse the full generated catalogue in [docs/CATALOGUE.md](docs/CATALOGUE.md); machine-readable exports are in [\`generated/\`](generated/).`;
 }
 export function renderCataloguePage(entries: Entry[]): string {
-  return `# embedded-AI catalogue\n\n> Generated from YAML in \`catalog/\`, \`pipelines/\` and \`primitives/\`. Do not edit by hand — run \`npm run index\` to regenerate.\n\n${renderCatalogue(entries)}`;
+  return `# ai-catalogue catalogue\n\n> Generated from YAML in \`catalog/\`, \`pipelines/\` and \`primitives/\`. Do not edit by hand — run \`npm run index\` to regenerate.\n\n${renderCatalogue(entries)}`;
 }
 export function renderAtAGlance(entries: Entry[]): string {
   const domains = new Set(entries.map(e => e.domain)).size;

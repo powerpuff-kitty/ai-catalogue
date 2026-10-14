@@ -1,6 +1,6 @@
 # embedded-ai-catalog-mcp
 
-An [MCP](https://modelcontextprotocol.io) server that exposes the **embedded-AI**
+An [MCP](https://modelcontextprotocol.io) server that exposes the **ai-catalogue**
 catalogue's offline need matcher and metadata search to Claude Desktop, Claude
 Code, Cursor and any other MCP client.
 
@@ -47,7 +47,7 @@ on macOS, `%APPDATA%\Claude\claude_desktop_config.json` on Windows):
 ```json
 {
   "mcpServers": {
-    "embedded-ai": { "command": "npx", "args": ["-y", "embedded-ai-catalog-mcp"] }
+    "ai-catalogue": { "command": "npx", "args": ["-y", "embedded-ai-catalog-mcp"] }
   }
 }
 ```
@@ -57,7 +57,7 @@ Cursor (`.cursor/mcp.json`) or any client using the same schema:
 ```json
 {
   "mcpServers": {
-    "embedded-ai": { "command": "npx", "args": ["-y", "embedded-ai-catalog-mcp"] }
+    "ai-catalogue": { "command": "npx", "args": ["-y", "embedded-ai-catalog-mcp"] }
   }
 }
 ```
@@ -65,7 +65,7 @@ Cursor (`.cursor/mcp.json`) or any client using the same schema:
 Point at a local checkout instead:
 
 ```json
-{ "mcpServers": { "embedded-ai": { "command": "node", "args": ["/path/to/embedded-AI/mcp/server.mjs"] } } }
+{ "mcpServers": { "ai-catalogue": { "command": "node", "args": ["/path/to/ai-catalogue/mcp/server.mjs"] } } }
 ```
 
 ## Example

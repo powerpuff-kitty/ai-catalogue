@@ -60,7 +60,7 @@ representative at an online or offline event.
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
 reported to the community leaders responsible for enforcement via GitHub's
-[private report form](https://github.com/powerpuff-kitty/embedded-AI/security/advisories/new)
+[private report form](https://github.com/powerpuff-kitty/ai-catalogue/security/advisories/new)
 or by contacting the maintainers directly on GitHub. All complaints will be
 reviewed and investigated promptly and fairly.
 

@@ -22,7 +22,7 @@ async function check(url: string) {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), timeoutMs);
   try {
-    const response = await fetch(url, { redirect: 'follow', signal: controller.signal, headers: { 'user-agent': 'embedded-ai-link-audit' } });
+    const response = await fetch(url, { redirect: 'follow', signal: controller.signal, headers: { 'user-agent': 'ai-catalogue-link-audit' } });
     await response.body?.cancel?.();
     results.push({ url, status: response.status, entries: urls.get(url) as string[] });
   } catch (error) {

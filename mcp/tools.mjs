@@ -1,5 +1,5 @@
 /**
- * Pure tool implementations for the embedded-AI MCP server.
+ * Pure tool implementations for the ai-catalogue MCP server.
  *
  * Kept free of the MCP SDK so they can be unit-tested directly. Each function
  * returns a Markdown string. In a checkout, use the sibling catalogue so tests exercise current edits;
@@ -85,7 +85,7 @@ export function statsTool() {
   const c = catalog.coverage;
   const e = c.evidence ?? {};
   return [
-    `# embedded-AI catalogue (v${version})`,
+    `# ai-catalogue catalogue (v${version})`,
     '',
     `- entries: ${c.total}`,
     `- domains: ${Object.keys(c.by_domain).length}`,

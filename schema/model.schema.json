@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Embedded AI catalogue entry",
+  "title": "AI catalogue entry",
   "type": "object",
   "required": ["id", "name", "domain", "tasks", "class", "links", "model", "license", "deployment", "compatibility", "evidence"],
   "properties": {

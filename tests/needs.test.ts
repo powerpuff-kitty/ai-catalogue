@@ -62,7 +62,7 @@ test('constraints exclude entries and explain why', () => {
 test('shortlist markdown names tasks and sources', () => {
   const sample = entries.find(e => e.id === 'zipdepth')!;
   const markdown = shortlistMarkdown([sample]);
-  assert.match(markdown, /# embedded-AI shortlist/);
+  assert.match(markdown, /# ai-catalogue shortlist/);
   assert.ok(markdown.includes(sample.name));
   assert.ok(markdown.includes(sample.path));
   assert.equal(upstreamOf(sample), sample.links.model || sample.links.repository || sample.links.homepage || sample.links.paper);

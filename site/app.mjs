@@ -10,7 +10,7 @@ const tr=(group,value)=>{const key=`${group}.${value}`;const rendered=t(key);ret
 const groupText=(name,value)=>['domain','kind','usage'].includes(name)?tr(name,value):value;
 const localizeReason=item=>item.reasonKey?t(item.reasonKey,item.reasonParams||{}):item.reason;
 const link=(label,url)=>{const node=el('a',label); const safe=safeURL(url); if(safe){node.href=safe;node.target='_blank';node.rel='noopener noreferrer';}return node;};
-const repoPath = path => 'https://github.com/powerpuff-kitty/embedded-AI/blob/main/'+path.split('/').map(encodeURIComponent).join('/');
+const repoPath = path => 'https://github.com/powerpuff-kitty/ai-catalogue/blob/main/'+path.split('/').map(encodeURIComponent).join('/');
 const SVGNS='http://www.w3.org/2000/svg';
 function icon(id){const svg=document.createElementNS(SVGNS,'svg');svg.setAttribute('class','icon');svg.setAttribute('aria-hidden','true');const use=document.createElementNS(SVGNS,'use');use.setAttribute('href','#'+id);svg.append(use);return svg;}
 const PAPER_HOSTS=['arxiv.org','distill.pub','openreview.net','paperswithcode.com','doi.org','nature.com','science.org','aclanthology.org','proceedings.mlr.press','jmlr.org','biorxiv.org'];

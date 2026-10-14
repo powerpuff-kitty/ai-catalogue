@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * embedded-AI MCP server.
+ * ai-catalogue MCP server.
  *
  * Exposes the catalogue's offline need matcher and metadata search as MCP tools
  * over stdio, so Claude Desktop, Cursor and other MCP clients can query it.

@@ -10,7 +10,7 @@
 ## Reporting a vulnerability
 
 Please **do not** open a public issue for security problems. Report privately via GitHub's
-[private vulnerability reporting](https://github.com/powerpuff-kitty/embedded-AI/security/advisories/new).
+[private vulnerability reporting](https://github.com/powerpuff-kitty/ai-catalogue/security/advisories/new).
 
 Include the affected file or workflow, a description, and a minimal reproduction if possible.
 You can expect an acknowledgement within 72 hours and a resolution or mitigation plan within

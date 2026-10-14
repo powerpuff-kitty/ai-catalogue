@@ -1,5 +1,5 @@
 {
-  "workflow_run": "https://github.com/powerpuff-kitty/embedded-AI/actions/runs/37299920740",
+  "workflow_run": "https://github.com/powerpuff-kitty/ai-catalogue/actions/runs/37299920740",
   "artifact_id": 11341681090,
   "note": "Receipt summary from explicit HTTPS acquisitions. Archive hashes and extracted model hashes are different where ZIP is used; not independent publisher signatures.",
   "artifacts": [

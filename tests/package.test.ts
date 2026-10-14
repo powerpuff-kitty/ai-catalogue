@@ -37,7 +37,7 @@ test('search filters by domain and free text', () => {
 
 test('shortlist renders markdown with manifest and upstream', () => {
   const md = shortlist([get('docling')]);
-  assert.match(md, /# embedded-AI shortlist/);
+  assert.match(md, /# ai-catalogue shortlist/);
   assert.match(md, /manifest:/);
   assert.equal(upstreamOf(get('docling')), 'https://github.com/docling-project/docling');
 });
