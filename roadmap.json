@@ -1,0 +1,290 @@
+{
+  "schemaVersion": 1,
+  "repository": "powerpuff-kitty/ai-catalogue",
+  "title": "AI Catalogue",
+  "updatedAt": "2026-10-14",
+  "planningIssue": "powerpuff-kitty/catalogue-engine#12",
+  "baselineRevision": "3f102760baa0cee533342fd9d1e8facdafe9534c",
+  "baseline": "The native catalogue and interfaces predate this split. Shared-preview PR #81 and curator-profile PR #83 are open; full-source/shared-interface parity and active rename surfaces remain incomplete. Older open issues below need evidence-based reconciliation, not blanket closure.",
+  "owns": [
+    "Canonical AI manifests, taxonomy, runtime/hardware policy, evidence and code/weights licensing.",
+    "AI-specific discovery, curator policy, promotion adapter and editorial content."
+  ],
+  "excludes": [
+    "Duplicated engine UI, generic scheduling/MCP/publishing infrastructure.",
+    "Breaking stable package/CLI/MCP identities or treating generic search as hardware proof."
+  ],
+  "phases": [
+    {
+      "id": "migration",
+      "title": "Non-breaking adoption and naming",
+      "exitCriteria": [
+        "#79 and child #84 preserve stable IDs/interfaces and correct active naming; retain the primary explorer until parity is verified."
+      ]
+    },
+    {
+      "id": "parity",
+      "title": "Complete dataset and interface parity",
+      "exitCriteria": [
+        "#85 runs the native and shared test matrix on the complete dataset; #80 closes only after distribution and rollback are verified."
+      ]
+    },
+    {
+      "id": "curation",
+      "title": "Review-only curation and approved promotion",
+      "exitCriteria": [
+        "#82 configuration is integrated; #86 validates approved native patches through the shared contract; live activation separately satisfies engine #7."
+      ]
+    },
+    {
+      "id": "editorial",
+      "title": "AI journal and release prerequisites",
+      "exitCriteria": [
+        "#87 proves draft exclusion and page/feed correspondence; approved content, URLs and rights are checked before any edition."
+      ]
+    },
+    {
+      "id": "native",
+      "title": "Retained native backlog",
+      "exitCriteria": [
+        "Reconcile each existing open issue against code, reports and current tests; preserve or narrow outstanding scope before closure."
+      ]
+    }
+  ],
+  "items": [
+    {
+      "issue": "powerpuff-kitty/ai-catalogue#79",
+      "title": "Non-breaking shared-engine adoption",
+      "phase": "migration",
+      "priority": "P0",
+      "status": "in-review",
+      "dependsOn": [
+        "powerpuff-kitty/catalogue-engine#1"
+      ],
+      "pullRequests": [
+        "https://github.com/powerpuff-kitty/ai-catalogue/pull/81"
+      ],
+      "notes": ""
+    },
+    {
+      "issue": "powerpuff-kitty/ai-catalogue#84",
+      "title": "Branding, repository/Pages URLs and compatibility aliases",
+      "phase": "migration",
+      "priority": "P0",
+      "status": "planned",
+      "dependsOn": [],
+      "pullRequests": [],
+      "notes": "",
+      "parent": "powerpuff-kitty/ai-catalogue#79"
+    },
+    {
+      "issue": "powerpuff-kitty/ai-catalogue#80",
+      "title": "Legacy interface retirement gate",
+      "phase": "parity",
+      "priority": "P1",
+      "status": "planned",
+      "dependsOn": [
+        "powerpuff-kitty/ai-catalogue#79",
+        "powerpuff-kitty/catalogue-engine#2"
+      ],
+      "pullRequests": [],
+      "notes": "Parent of #85; preserve translations, ranking, package and MCP contracts until acceptance."
+    },
+    {
+      "issue": "powerpuff-kitty/ai-catalogue#85",
+      "title": "Full-source search, export and served-interface parity",
+      "phase": "parity",
+      "priority": "P0",
+      "status": "planned",
+      "dependsOn": [
+        "powerpuff-kitty/ai-catalogue#79",
+        "powerpuff-kitty/catalogue-engine#2",
+        "powerpuff-kitty/catalogue-engine#13"
+      ],
+      "pullRequests": [],
+      "notes": "",
+      "parent": "powerpuff-kitty/ai-catalogue#80"
+    },
+    {
+      "issue": "powerpuff-kitty/ai-catalogue#82",
+      "title": "AI curator configuration",
+      "phase": "curation",
+      "priority": "P0",
+      "status": "in-review",
+      "dependsOn": [
+        "powerpuff-kitty/ai-catalogue#79",
+        "powerpuff-kitty/catalogue-engine#6"
+      ],
+      "pullRequests": [
+        "https://github.com/powerpuff-kitty/ai-catalogue/pull/83"
+      ],
+      "notes": ""
+    },
+    {
+      "issue": "powerpuff-kitty/ai-catalogue#86",
+      "title": "Approved AI proposals to canonical YAML",
+      "phase": "curation",
+      "priority": "P1",
+      "status": "planned",
+      "dependsOn": [
+        "powerpuff-kitty/ai-catalogue#82",
+        "powerpuff-kitty/catalogue-engine#16"
+      ],
+      "pullRequests": [],
+      "notes": "Shared coordination: engine #8. Never synthesize benchmark evidence or weights rights."
+    },
+    {
+      "issue": "powerpuff-kitty/ai-catalogue#87",
+      "title": "Revision-linked AI comparisons and shared journal",
+      "phase": "editorial",
+      "priority": "P1",
+      "status": "planned",
+      "dependsOn": [
+        "powerpuff-kitty/ai-catalogue#79",
+        "powerpuff-kitty/catalogue-engine#4"
+      ],
+      "pullRequests": [],
+      "notes": ""
+    },
+    {
+      "issue": "powerpuff-kitty/ai-catalogue#1",
+      "title": "Reproducible benchmark harness",
+      "phase": "native",
+      "priority": "P2",
+      "status": "needs-triage",
+      "dependsOn": [],
+      "pullRequests": [],
+      "notes": "Existing open issue retained. Some implementation may already exist; verify residual scope before closing. Completeness is not model quality; unknowns remain unknown."
+    },
+    {
+      "issue": "powerpuff-kitty/ai-catalogue#2",
+      "title": "RV1106 / SEEN-0 benchmark stack",
+      "phase": "native",
+      "priority": "P2",
+      "status": "needs-triage",
+      "dependsOn": [],
+      "pullRequests": [],
+      "notes": "Existing open issue retained. Some implementation may already exist; verify residual scope before closing. Completeness is not model quality; unknowns remain unknown."
+    },
+    {
+      "issue": "powerpuff-kitty/ai-catalogue#3",
+      "title": "Hardware compatibility matrix",
+      "phase": "native",
+      "priority": "P2",
+      "status": "needs-triage",
+      "dependsOn": [],
+      "pullRequests": [],
+      "notes": "Existing open issue retained. Some implementation may already exist; verify residual scope before closing. Completeness is not model quality; unknowns remain unknown."
+    },
+    {
+      "issue": "powerpuff-kitty/ai-catalogue#4",
+      "title": "Native searchable catalogue site",
+      "phase": "native",
+      "priority": "P2",
+      "status": "needs-triage",
+      "dependsOn": [],
+      "pullRequests": [],
+      "notes": "Existing open issue retained. Some implementation may already exist; verify residual scope before closing. Completeness is not model quality; unknowns remain unknown."
+    },
+    {
+      "issue": "powerpuff-kitty/ai-catalogue#5",
+      "title": "Versioned machine-readable JSON indexes",
+      "phase": "native",
+      "priority": "P2",
+      "status": "needs-triage",
+      "dependsOn": [],
+      "pullRequests": [],
+      "notes": "Existing open issue retained. Some implementation may already exist; verify residual scope before closing. Completeness is not model quality; unknowns remain unknown."
+    },
+    {
+      "issue": "powerpuff-kitty/ai-catalogue#6",
+      "title": "Benchmark evidence schema",
+      "phase": "native",
+      "priority": "P2",
+      "status": "needs-triage",
+      "dependsOn": [],
+      "pullRequests": [],
+      "notes": "Existing open issue retained. Some implementation may already exist; verify residual scope before closing. Completeness is not model quality; unknowns remain unknown."
+    },
+    {
+      "issue": "powerpuff-kitty/ai-catalogue#7",
+      "title": "Audio coverage",
+      "phase": "native",
+      "priority": "P2",
+      "status": "needs-triage",
+      "dependsOn": [],
+      "pullRequests": [],
+      "notes": "Existing open issue retained. Some implementation may already exist; verify residual scope before closing. Completeness is not model quality; unknowns remain unknown."
+    },
+    {
+      "issue": "powerpuff-kitty/ai-catalogue#8",
+      "title": "Vision coverage",
+      "phase": "native",
+      "priority": "P2",
+      "status": "needs-triage",
+      "dependsOn": [],
+      "pullRequests": [],
+      "notes": "Existing open issue retained. Some implementation may already exist; verify residual scope before closing. Completeness is not model quality; unknowns remain unknown."
+    },
+    {
+      "issue": "powerpuff-kitty/ai-catalogue#9",
+      "title": "Sensor and industrial coverage",
+      "phase": "native",
+      "priority": "P2",
+      "status": "needs-triage",
+      "dependsOn": [],
+      "pullRequests": [],
+      "notes": "Existing open issue retained. Some implementation may already exist; verify residual scope before closing. Completeness is not model quality; unknowns remain unknown."
+    },
+    {
+      "issue": "powerpuff-kitty/ai-catalogue#10",
+      "title": "Geospatial and scientific coverage",
+      "phase": "native",
+      "priority": "P2",
+      "status": "needs-triage",
+      "dependsOn": [],
+      "pullRequests": [],
+      "notes": "Existing open issue retained. Some implementation may already exist; verify residual scope before closing. Completeness is not model quality; unknowns remain unknown."
+    },
+    {
+      "issue": "powerpuff-kitty/ai-catalogue#11",
+      "title": "Evidence/completeness scoring",
+      "phase": "native",
+      "priority": "P2",
+      "status": "needs-triage",
+      "dependsOn": [],
+      "pullRequests": [],
+      "notes": "Existing open issue retained. Some implementation may already exist; verify residual scope before closing. Completeness is not model quality; unknowns remain unknown."
+    },
+    {
+      "issue": "powerpuff-kitty/ai-catalogue#12",
+      "title": "Link, manifest and generated-drift checks",
+      "phase": "native",
+      "priority": "P2",
+      "status": "needs-triage",
+      "dependsOn": [],
+      "pullRequests": [],
+      "notes": "Existing open issue retained. Some implementation may already exist; verify residual scope before closing. Completeness is not model quality; unknowns remain unknown."
+    },
+    {
+      "issue": "powerpuff-kitty/ai-catalogue#13",
+      "title": "Embodied AI and learned-control coverage",
+      "phase": "native",
+      "priority": "P2",
+      "status": "needs-triage",
+      "dependsOn": [],
+      "pullRequests": [],
+      "notes": "Existing open issue retained. Some implementation may already exist; verify residual scope before closing. Completeness is not model quality; unknowns remain unknown."
+    },
+    {
+      "issue": "powerpuff-kitty/ai-catalogue#14",
+      "title": "Bounded tiny-model training examples",
+      "phase": "native",
+      "priority": "P2",
+      "status": "needs-triage",
+      "dependsOn": [],
+      "pullRequests": [],
+      "notes": "Existing open issue retained. Some implementation may already exist; verify residual scope before closing. Completeness is not model quality; unknowns remain unknown."
+    }
+  ]
+}
