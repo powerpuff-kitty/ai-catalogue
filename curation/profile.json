@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "catalogue": "ai-catalogue",
+  "repository": "powerpuff-kitty/ai-catalogue",
+  "baseBranch": "main",
+  "policy": "Catalogue reusable on-device and embedded intelligence: models, runtimes, toolkits and relevant primitives. Separate pretrained models, training-only architectures and hosted-only services. Prefer primary repository evidence. Keep code and weights licences distinct. Do not infer hardware compatibility, offline operation, RAM, latency or benchmark results. Never label a documentation review as a local test. Unknowns stay unknown. Generated assessments are review dossiers, not canonical catalogue edits or endorsements.",
+  "kinds": [
+    "model",
+    "collection",
+    "pipeline",
+    "toolkit",
+    "primitive"
+  ],
+  "fields": [
+    "task",
+    "codeLicense",
+    "weightsLicense",
+    "runtime",
+    "hardware",
+    "offline",
+    "memoryRequirement"
+  ],
+  "tags": [
+    "audio",
+    "vision",
+    "language",
+    "time-series",
+    "geospatial",
+    "on-device",
+    "browser",
+    "mobile",
+    "microcontroller",
+    "runtime"
+  ],
+  "inventory": {
+    "path": "generated/catalog.full.json",
+    "itemsKey": "entries",
+    "idKey": "id",
+    "titleKey": "name",
+    "repositoryKey": "links.repository",
+    "namespace": "ai"
+  },
+  "daily": {
+    "discover": 30,
+    "investigate": 3,
+    "maintain": 5,
+    "feature": 0
+  },
+  "weekly": {
+    "discover": 50,
+    "investigate": 5,
+    "maintain": 10,
+    "feature": 5
+  },
+  "limits": {
+    "requests": 100,
+    "modelCalls": 16,
+    "inputChars": 10000,
+    "outputTokens": 1200,
+    "monthlyTokens": 3000000,
+    "runTokens": 300000,
+    "reviewDays": 14,
+    "timeoutSeconds": 600
+  }
+}

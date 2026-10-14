@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "queries": [
+    "topic:edge-ai archived:false fork:false",
+    "topic:tinyml archived:false fork:false",
+    "\"on-device\" in:description archived:false fork:false",
+    "\"WebGPU\" \"inference\" in:description archived:false fork:false"
+  ],
+  "watch": []
+}
