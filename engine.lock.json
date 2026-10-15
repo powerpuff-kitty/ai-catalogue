@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "engineVersion": "0.1.0-alpha.1",
+  "repository": "powerpuff-kitty/catalogue-engine",
+  "revision": "c5ac8f3355589681f4bd0ebefafffb6cbaab772d",
+  "files": {
+    "packages/cli/index.mjs": "373c4b32a953281ec4fa353ab17e60ec120aa477297defe72c0a084ea46ad917",
+    "packages/core/index.mjs": "6a28d1f5fbd5c8d7625278f7e4edd35a57c1eb63d2e0412d6896d7bef84bcd45",
+    "packages/search/index.mjs": "3dcd87b2ef83b5330eba9b72346ec48eb34abe4acd07a0db27db16631ea873c5",
+    "packages/ui/app.mjs": "49e1e95661e22d93dd108506d38a50651eb296315f51f495e521d75c4abc38ef",
+    "packages/ui/render.mjs": "09a8de8a32fb884553cf9753e974ccf59c123bfcdba26471414b08d180f23105",
+    "packages/ui/state.mjs": "932c39a3867f9fe771829d0d43aef461f72bda44239c4e0c7781caa0cc439b6e",
+    "packages/ui/style.css": "182ad0f5d26bb6238d88c8929c48036a4ecc5a56f4f1f206dd00399bd8f16665"
+  }
+}

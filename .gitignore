@@ -8,3 +8,7 @@ __pycache__/
 audit.json
 playwright-report/
 test-results/
+
+# Parallel shared-engine preview (derived, not canonical data)
+generated/catalogue.v1.json
+dist-shared/

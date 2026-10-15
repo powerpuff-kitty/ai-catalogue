@@ -1,0 +1,11 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {projectAI} from '../scripts/shared-catalogue-adapter.mjs';
+const fixture=()=>({entries:[{id:'sample-model',name:'Sample model',description:'Fictional adapter test record.',domain:'audio',kind:'model',tasks:['transcription'],runtimes:['browser'],license:{code:'MIT',weights:'unknown'},links:{repository:'https://example.org/model'},compatibility:[{target:'example-device',status:'unknown'}]}]});
+test('projection adds namespace without changing the source or legacy ID',()=>{const source=fixture(),before=JSON.stringify(source),d=projectAI(source);assert.equal(d.entries[0].id,'ai:sample-model');assert.equal(d.entries[0].details['Legacy ID'],'sample-model');assert.equal(JSON.stringify(source),before);assert.deepEqual(d.entries[0].extensions.ai,source.entries[0]);});
+test('does not promote unreviewed or per-target evidence to generic tested status',()=>{const d=fixture();d.entries[0].compatibility[0].status='reproduced';assert.equal(projectAI(d).entries[0].evidence.status,'unreviewed');});
+test('preserves recognized review dates but never invents them',()=>{const d=fixture();d.entries[0].reviewed='2026-10-06';assert.equal(projectAI(d).entries[0].evidence.reviewedAt,'2026-10-06');d.entries[0].reviewed='2026-02-30';assert.equal(projectAI(d).entries[0].evidence.reviewedAt,null);});
+test('unsafe links excluded from clickable projection and retained in original metadata',()=>{const d=fixture();d.entries[0].links.repository='javascript:alert(1)';const e=projectAI(d).entries[0];assert.match(e.links[0].url,/^https:/);assert.equal(e.extensions.ai.links.repository,'javascript:alert(1)');});
+test('missing runtime is unknown, not browser compatible',()=>{const d=fixture();delete d.entries[0].runtimes;assert.deepEqual(projectAI(d).entries[0].facets.runtime,[]);});
+test('duplicates and missing IDs fail',()=>{const d=fixture();d.entries[0].runtimes=[];d.entries.push(d.entries[0]);assert.throws(()=>projectAI(d));assert.throws(()=>projectAI({entries:[{}]}));});
+test('AI profile differs from procedural profile and does not implement legacy need matching',()=>{const p=projectAI(fixture()).profile;assert.ok(p.facets.some(f=>f.id==='runtime'));assert.ok(!p.facets.some(f=>f.id==='stack'));assert.match(p.description,/does not replace/);});
